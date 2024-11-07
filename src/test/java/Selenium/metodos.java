@@ -27,7 +27,6 @@ public class metodos {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         } catch (Exception e) {
-            System.out.println("El elemento no fue visible");
             return null;
         }
     }
@@ -45,11 +44,4 @@ public class metodos {
         driver.findElement(By.id("password")).sendKeys(password);
         driver.findElement(By.id("login-button")).click();
     }
-
-    public void CerrarCeccion (){
-        driver.findElement(By.id("react-burger-menu-btn")).click();
-        ElementoVisible(By.id("logout_sidebar_link"));
-        driver.findElement(By.id("logout_sidebar_link")).click();
-    }
-
 }
